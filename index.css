@@ -1,0 +1,32 @@
+.perfil {
+    background-color: #263e3e;  
+    height: 100vh;
+}
+.fotoPerfil {
+    margin: 5%;
+    border-radius: 50%;
+    border: solid 10px #334f4f;
+    margin-bottom: 1px;
+}
+
+h3 {
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    margin-bottom: 8vh;
+    font-size: 3em;
+}
+
+.tags {
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 2.5em;
+}
+
+.nav {
+    margin: 20px;
+}
+
+.fundo {
+    background: linear-gradient(rgb(50, 40, 40), rgb(124, 117, 117), rgb(90, 75, 178));    
+
+}
