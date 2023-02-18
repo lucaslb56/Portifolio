@@ -6,6 +6,7 @@
     <title>Portfólio Lucas Barros</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
+    <script type="module" src="smtp.js"></script>
   </head>
 
   <body>
@@ -68,7 +69,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Sistema de Agendamento de Salas</h5>
                   <p class="card-text">Projeto acadêmico com várias funcionalidades e com responsividade assim como este portfólio.</p>
-                  <a href="#" class="btn btn-primary">Veja mais</a>
+                  <a href="https://github.com/lucaslb56/Sistema-Agendamento-Salas/wiki" class="btn btn-primary">Veja mais</a>
                 </div>
               </div>
             </div>
@@ -77,8 +78,8 @@
                 <img class="card-img-top" src="Projeto Python.png" alt="Projeto 2" />
                 <div class="card-body">
                   <h5 class="card-title">Automações em Python</h5>
-                  <p class="card-text">vários códigos em python que utilizei para fazer a automatização de tarefas repetitivas, em sua maioria da área financeira.</p>
-              <a href="#" class="btn btn-primary">Veja mais</a>
+                  <p class="card-text">Vários códigos em python que utilizei para fazer a automatização de tarefas repetitivas, porém alguns não estão disponíveis aqui.</p>
+              <a href="https://github.com/lucaslb56/Python-Codigos" class="btn btn-primary">Veja mais</a>
             </div>
           </div>
         </div>
@@ -130,3 +131,36 @@
 <script src="script.js"></script>
   </body>
 </html>
+<script>
+
+  function enviarEmail() {
+  const remetenteEmail = "lucaslb5656@gmail.com"; 
+  const remetenteSenha = "94789478lb"; 
+  const destinatarioEmail = "lb.lucasbarros10@gmail.com"; 
+  const assunto = "Contato Portfólio!"; 
+  
+  // Obtém os valores do formulário
+  const nome = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const mensagem = document.getElementById("message").value;
+  
+  // Monta o corpo do email
+  const corpoEmail = `Nome: ${nome}\nEmail: ${email}\nMensagem: ${mensagem}`;
+  
+  // Configura os parâmetros para enviar o email
+  const parametros = {
+    from: remetenteEmail,
+    to: destinatarioEmail,
+    subject: assunto,
+    body: corpoEmail
+  };
+  
+  // Envia o email 
+  Email.send({
+    SecureToken: "SeuSecureToken",
+    ...parametros
+  }).then(
+    mensagem => alert("Mensagem enviada com sucesso!")
+  );
+}
+</script>
