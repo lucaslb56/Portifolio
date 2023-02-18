@@ -1,0 +1,51 @@
+/* Estilos personalizados */
+body {
+    background: linear-gradient(to bottom, #767676, #444444);
+    color: #FFC107;
+}
+nav {
+    background-color: #4a4a4a;
+}
+.section {
+    margin-top: 80px;
+  }
+  
+  .jumbotron {
+    background-image: url('wallpaper.jpg');
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .jumbotron h1,
+  .jumbotron p {
+    color: #fff;
+    text-align: center;
+  }
+  
+  .card {
+    margin-bottom: 30px;
+    background: linear-gradient(to bottom, #dcdcdc, #b9b9b9);
+    color: black;
+  }
+  
+  footer {
+    background: linear-gradient(to bottom, #767676, #444444);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilos do Bootstrap */
+  
+  .navbar {
+    margin-bottom: 30px;
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
