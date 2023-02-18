@@ -6,7 +6,7 @@
     <title>Portfólio Lucas Barros</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <script type="module" src="smtp.js"></script>
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
   </head>
 
   <body>
@@ -88,7 +88,7 @@
             <img class="card-img-top" src="Portifolio.png" alt="Projeto 3" />
             <div class="card-body">
               <h5 class="card-title">Portfólio</h5>
-              <p class="card-text">Quebrando aqui a quarta parede, este Portfólio também foi programado por mim, como forma demostrar meus conhecimentos.</p>
+              <p class="card-text">Este Portfólio também foi programado por mim, como forma demostrar meus conhecimentos.</p>
               <a href="#" class="btn btn-primary">Veja mais</a>
             </div>
           </div>
@@ -103,7 +103,7 @@
       <form>
         <div class="form-group">
           <label for="name">Nome</label>
-          <input type="text" class="form-control" id="name" />
+          <input type="text" class="form-control" id="nome" />
         </div>
         <div class="form-group">
           <label for="email">Email</label>
@@ -111,9 +111,9 @@
         </div>
         <div class="form-group">
           <label for="message">Mensagem</label>
-          <textarea class="form-control" id="message" rows="3"></textarea>
+          <textarea class="form-control" id="mensagem" rows="3"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button onclick="enviarEmail()" type="button" class="btn btn-primary">Enviar</button>
       </form>
     </div>
   </section>
@@ -131,36 +131,30 @@
 <script src="script.js"></script>
   </body>
 </html>
-<script>
 
+<script>
   function enviarEmail() {
-  const remetenteEmail = "lucaslb5656@gmail.com"; 
-  const remetenteSenha = "94789478lb"; 
-  const destinatarioEmail = "lb.lucasbarros10@gmail.com"; 
-  const assunto = "Contato Portfólio!"; 
-  
+  emailjs.init("QiIrM8s9ZCvHwGMQd");
+  const remetenteEmail = "pcctcmdi@gmail.com"; // insira o endereço de e-mail do remetente
+  const remetenteSenha = "Pcct1f@m"; // insira a senha do e-mail do remetente
+  const destinatarioEmail = "lb.lucasbarros10@gmail.com"; // insira o endereço de e-mail do destinatário
+  const assunto = "Novo Contato Portfólio"; // insira o assunto do e-mail
+
   // Obtém os valores do formulário
-  const nome = document.getElementById("name").value;
+  const nome = document.getElementById("nome").value;
   const email = document.getElementById("email").value;
-  const mensagem = document.getElementById("message").value;
-  
-  // Monta o corpo do email
-  const corpoEmail = `Nome: ${nome}\nEmail: ${email}\nMensagem: ${mensagem}`;
-  
-  // Configura os parâmetros para enviar o email
-  const parametros = {
-    from: remetenteEmail,
-    to: destinatarioEmail,
-    subject: assunto,
-    body: corpoEmail
-  };
-  
-  // Envia o email 
-  Email.send({
-    SecureToken: "SeuSecureToken",
-    ...parametros
+  const mensagem = document.getElementById("mensagem").value;
+
+  // Envia o e-mail usando o EmailJS
+  emailjs.send("service_7vx874i", "template_uyl5jvt", {
+    from_name: nome,
+    message: mensagem,
+    reply_to: email,
+    to_email: destinatarioEmail,
+    subject: assunto
   }).then(
     mensagem => alert("Mensagem enviada com sucesso!")
   );
 }
+
 </script>
