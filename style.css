@@ -5,6 +5,7 @@ body {
 }
 nav {
     background-color: #4a4a4a;
+    border: solid 1px rgb(58, 57, 57);
 }
 .section {
     margin-top: 80px;
