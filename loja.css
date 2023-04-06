@@ -1,12 +1,12 @@
 /* Estilos gerais */
 body {
 	font-family: Arial, sans-serif;
-	color: #333;
+	color: #020202;
+	background: linear-gradient(to bottom, #477486, #999);
 }
-
 /* Cabeçalho */
 header {
-	background-color: #fff;
+	background-color: #2a2aa93a;
 	border-bottom: 1px solid #ddd;
 	padding: 10px 0;
 }
@@ -14,22 +14,26 @@ header {
 .navbar-brand {
 	font-weight: bold;
 	font-size: 30px;
+	
 }
 
 .navbar-nav .nav-link {
 	font-weight: bold;
 	font-size: 18px;
+	
 }
 
 /* Conteúdo */
 .content {
 	padding: 40px 0;
+	
 }
 
 .card {
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 	border: none;
 	transition: all 0.3s ease;
+	margin-bottom: 5px;
 }
 
 .card:hover {
@@ -64,9 +68,12 @@ header {
 
 /* Rodapé */
 footer {
-	background-color: #f8f9fa;
+	background-color: #477486;
 	padding: 20px 0;
 	font-size: 14px;
 	color: #999;
 	border-top: 1px solid #ddd;
+}
+h1 {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
