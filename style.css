@@ -12,24 +12,37 @@ nav {
   }
   
   .jumbotron {
-    background-image: url('wallpaper.jpg');
+    background-image: url('imagens/wallpaper.jpg');
     background-size: cover;
     height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+  .section {
+    text-align: justify;
+  }
   .jumbotron h1,
   .jumbotron p {
     color: #fff;
     text-align: center;
   }
-  
-  .card {
+  .projetos {
     margin-bottom: 30px;
+    height: 450px;
     background: linear-gradient(to bottom, #dcdcdc, #b9b9b9);
     color: black;
+    overflow: auto;
+    cursor: pointer;
+  }
+  .certificados {
+    color: black;
+    cursor: pointer;
+    background: linear-gradient(to bottom, #dcdcdc, #b9b9b9);
+    margin: 10px;
+  }
+  .card-text{
+    text-align: left;
   }
   
   footer {
@@ -45,8 +58,19 @@ nav {
     margin-bottom: 30px;
   }
   
-  .card-img-top {
+  .img-projeto {
     height: 200px;
     object-fit: cover;
   }
   
+  .tecnologias {
+    margin-top: 10px;
+    justify-items: center;
+}
+
+.icons {
+  width: 50%;
+  min-width: 30px;
+  max-width: 60px;
+  margin: 10px;
+}
