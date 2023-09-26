@@ -5,7 +5,7 @@ body {
 }
 nav {
     background-color: #4a4a4a;
-    border: solid 1px rgb(58, 57, 57);
+    border: solid 1px rgb(40, 37, 85);
 }
 .section {
     margin-top: 80px;
@@ -14,7 +14,7 @@ nav {
   .jumbotron {
     background-image: url('imagens/wallpaper.jpg');
     background-size: cover;
-    height: 400px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
