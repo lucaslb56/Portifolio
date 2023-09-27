@@ -208,7 +208,7 @@
           <h2>Projetos</h2>
           <div class="row">
             <div class="col-md-4">
-              <div class="card projetos">
+              <div data-src="projetos/SistemaAgendamento/SistemaAgendamento.html" class="card projetos">
                 <img class="card-img-top img-projeto" src="imagens/Tela Home Desktop.jpeg" alt="Projeto 1" />
                 <div class="card-body">
                   <h5 class="card-title">Sistema de Agendamento de Salas</h5>
@@ -238,7 +238,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div onclick="window.location.href = 'projetos/Recicle Run Game/RecicleRun.html'" class="card projetos">
+          <div data-src="projetos/Recicle Run Game/RecicleRun.html" class="card projetos">
             <img class="card-img-top img-projeto" src="imagens/Recicle Run.png" alt="Projeto 3" />
             <div class="card-body text-center">
               <h5 class="card-title">Game Recicle Run</h5>
@@ -360,4 +360,14 @@
   );
 }
 
+$(document).ready(function() {
+  // Adiciona um evento de clique a todas as divs com a classe "projeto"
+  $('.projetos').on('click', function() {
+    // Obtém o valor do atributo data-src
+    var dataSrc = $(this).data('src');
+
+    // Redireciona para a página especificada
+    window.location.href = dataSrc;
+  });
+});
 </script>
