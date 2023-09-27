@@ -12,7 +12,33 @@
 </head>
 
 <body>
-
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <a class="navbar-brand" href="#">Recicle Run Game</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#sobre">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#imagens">Imagens</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#repositorio">Repositório</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
   <header class="jumbotron">
     <div class="container">
@@ -22,7 +48,7 @@
   </header>
 
   <main>
-    <section id="linguagens" class="section">
+    <section id="sobre" class="section">
       <div class="container">
         <h2>Sobre</h2>
         <hr>
@@ -35,39 +61,66 @@
           ao excesso de lixo.
         </p>
         <h5>Desenvolvimento</h5>
-        <p>O jogo foi desenvolvido no estilo top-down inspirado em grande parte no jogo pac-man, porém trazendo uma ideia de
-          conscientização ambiental. Totalmente programado em Java e consequentemente em POO, toda a parte de interface gráfica foi
-          feita com a biblioteca gráfica Swing popularmente conhecida como java 2d, o mapa é feito é divido por tiles, que compõe a tela,
-          os tiles tem como atributos a sua spryte e também uma variavel "Colisão" (booleana), esses tiles são definidos no codigo da classe
-          responsável pela construção do mapa, a organização e desenho dos mesmos, é feita através da visão do mapa como uma matriz, dessa forma,
-          o desenho do mapa pode ser livremente feito em um arquivo txt, utilizando o index do tile e os separando por espaço, este arquivo é lido
-          pelo codigo e guardado como matriz, que logo após é desenhada no mapa.
-          As entidades possuem diversos atributos e métodos, sendo eles tamanho, hitbox, verificação de colisão e sprites, o player possue metodos para
-          de recebimentos de comando e metodos de uso de itens bonus, assim como vida, pontuação, metodo de captura de lixo e outros. já o vião possue
-          uma mecanica de perseguição inteligente, que trata o mapa como um grafo, dessa forma, consegue calcular a melhor rota até o player a cada loop do jogo.
-          Os itens possuem tamanho, score, spryte e o metod
-        </p>
-          <h5>Conclusão</h5>
-          <p>Jogo com temática ambiental, desenvolvido em Java como parte de um projeto acadêmico em
-            colaboração com meus colegas de faculdade. O jogo tem como contexto uma cidade afetada pela poluição, onde o
-            objetivo
-            do jogador é coletar uma quantidade máxima de resíduos enquanto evita as lixeiras radioativas que ganharam
-            vida devido
-            ao excesso de lixo.
-        </p>
+        <p>
+          O jogo em questão foi desenvolvido no estilo top-down, tendo como principal inspiração o icônico
+           Pac-Man. No entanto, sua singularidade está na incorporação de uma forte mensagem de conscientização
+            ambiental. Todo o processo de programação ocorreu em Java, adotando, por consequência, a abordagem
+             da Programação Orientada a Objetos (POO). Quanto à parte de interface gráfica, esta foi
+              integralmente construída com a utilização da biblioteca gráfica Swing, popularmente conhecida
+               como Java 2D.
+          </p>
+          <h5>Mapa</h5>
+          <p>
+            A estrutura do jogo se baseia na divisão do mapa em "tiles," que, por sua vez, compõem a tela de
+             jogo. Cada tile é definido com atributos específicos, incluindo a sua sprite e uma variável
+              booleana denominada "Colisão." Essa definição dos tiles acontece no código da classe responsável
+               pela construção do mapa, que adota uma perspectiva matricial para a organização e renderização
+                dos elementos. Dessa forma, a representação visual do mapa pode ser livremente concebida em um
+                 arquivo de texto, no qual os índices dos tiles são separados por espaços. Esse arquivo é 
+                 então lido pelo código e transformado em uma matriz, que, por fim, é desenhada na tela do 
+                 jogo.
+          </p>
+          <h5>Entidades</h5>
+          <p>
+            No que diz respeito às entidades presentes no jogo, elas são dotadas de diversos atributos
+             e métodos. O jogador, por exemplo, possui características como tamanho, hitbox, detecção de
+              colisões e sprites. Além disso, o jogador dispõe de métodos para receber comandos e para usar
+               itens bônus. O jogo também leva em conta elementos como a vida do jogador, sua pontuação,
+                um mecanismo de captura de lixo, entre outros.
+          </p>
+          <p>
+            O antagonista do jogo, o vilão, adota uma mecânica de perseguição inteligente. Ele trata o mapa
+             como um grafo, o que lhe permite calcular a melhor rota até o jogador em cada ciclo do jogo. Isso 
+             adiciona um nível de desafio significativo à experiência do jogador.
+          </p>
+          <h5>Itens</h5>
+          <p>
+            Os itens no jogo possuem atributos como tamanho, pontuação, sprite e um método que é executado
+             quando há uma colisão com o jogador. Esse método define a funcionalidade do item, como, por
+              exemplo, sua coleta ou ações especiais. Notavelmente, os itens de lixo acrescem pontos ao
+               jogador e retardam o seu tempo de inatividade, ao passar do tempo de jogo fica mais dificil retardar
+               o tempo de inatividade trazendo um pouco mais de desafio ao jogador.
+          </p>
+          <h5>Rercords</h5>
+          <p>
+            Por fim, o jogo apresenta um sistema de registro de recordes, no qual o jogador tem seu recorde
+             salvo na tela inicial, caso ele supere seu melhor desempenho anterior. Essa característica
+              é incorporada para incentivar a competição e o aprimoramento da jogabilidade, tornando a 
+              experiência do jogador mais envolvente e desafiadora.
+          </p>
       </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="imagens" class="section">
       <div class="container">
         <h2>Imagens</h2>
         <hr>
         <div class="row">
           <div class="col-lg-6 col-12">
-            <div class="card projetos">
+            <div class="card imagens">
               <img class="card-img-top img-projeto" src="Tela_menu.png" data-toggle="modal" data-target="#modalImagem1"
                 alt="Projeto 1" />
-              <div class="card-body">
+              
                 <!-- Modal para a imagem em tamanho maior -->
                 <div class="modal fade" id="modalImagem1" tabindex="-1" aria-labelledby="modalImagemLabel"
                   aria-hidden="true">
@@ -79,17 +132,15 @@
                     </div>
                   </div>
                 </div>
-                <p class="card-text">Tela incial do jogo onde consta um menu simples, nome do jogo e o último record.
-                </p>
-              </div>
+              
             </div>
           </div>
 
           <div class="col-lg-6 col-12">
-            <div class="card projetos">
+            <div class="card imagens">
               <img class="card-img-top img-projeto" src="Tela_jogo2.png" data-toggle="modal" data-target="#modalImagem2"
                 alt="Projeto 1" />
-              <div class="card-body">
+              
                 <!-- Modal para a imagem em tamanho maior -->
                 <div class="modal fade" id="modalImagem2" tabindex="-1" aria-labelledby="modalImagemLabel"
                   aria-hidden="true">
@@ -101,18 +152,16 @@
                     </div>
                   </div>
                 </div>
-                <p class="card-text">Jogo em funcionamento onde pode se ver o player, vilões, lixos, pontuação e outros.
-                </p>
-              </div>
+              
             </div>
           </div>
 
 
           <div class="col-lg-6 col-12">
-            <div class="card projetos">
+            <div class="card imagens">
               <img class="card-img-top img-projeto" src="Tela_jogo1.png" data-toggle="modal" data-target="#modalImagem3"
                 alt="Projeto 1" />
-              <div class="card-body">
+              
                 <!-- Modal para a imagem em tamanho maior -->
                 <div class="modal fade" id="modalImagem3" tabindex="-1" aria-labelledby="modalImagemLabel"
                   aria-hidden="true">
@@ -124,17 +173,15 @@
                     </div>
                   </div>
                 </div>
-                <p class="card-text">Jogo em funcionamento demostrando o item bonus "Caminhão de lixo" equipado.</p>
-              </div>
+              
             </div>
           </div>
 
 
           <div class="col-lg-6 col-12">
-            <div class="card projetos">
+            <div class="card imagens">
               <img class="card-img-top img-projeto" src="Tela_gameover.png" data-toggle="modal"
                 data-target="#modalImagem4" alt="Projeto 1" />
-              <div class="card-body">
                 <!-- Modal para a imagem em tamanho maior -->
                 <div class="modal fade" id="modalImagem4" tabindex="-1" aria-labelledby="modalImagemLabel"
                   aria-hidden="true">
@@ -146,9 +193,6 @@
                     </div>
                   </div>
                 </div>
-                <p class="card-text">Tela de gameover, que aparece ao ser pego pelos vilões ou ao perder por
-                  inatividade.</p>
-              </div>
             </div>
           </div>
 
@@ -159,9 +203,9 @@
 
   </main>
 
-  <footer class="bg-light">
+  <footer id="repositorio" class="bg-light">
     <div class="container">
-      <p>&copy; 2023 Lucas Barros. Todos os direitos reservados.</p>
+      <p>&copy; Repositório: <a href="https://github.com/lucaslb56/Jogo_Aps"> https://github.com/lucaslb56/Jogo_Aps</a></p>
     </div>
   </footer>
 
