@@ -24,11 +24,11 @@ nav {
   }
   .jumbotron h1,
   .jumbotron p {
-    color: #fff;
+    color: #eee2e2;
     text-align: center;
   }
   .projetos {
-    width: 100%;
+    
     height: auto;
     margin-bottom: 30px;
     background: linear-gradient(to bottom, #dcdcdc, #b9b9b9);

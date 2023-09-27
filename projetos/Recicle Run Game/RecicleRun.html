@@ -33,15 +33,20 @@
           do jogador é coletar uma quantidade máxima de resíduos enquanto evita as lixeiras radioativas que ganharam
           vida devido
           ao excesso de lixo.
-
-        <h5>Mecânicas</h5>
-        <p>Jogo com temática ambiental, desenvolvido em Java como parte de um projeto acadêmico em
-          colaboração com meus colegas de faculdade. O jogo tem como contexto uma cidade afetada pela poluição, onde o
-          objetivo
-          do jogador é coletar uma quantidade máxima de resíduos enquanto evita as lixeiras radioativas que ganharam
-          vida devido
-          ao excesso de lixo.
-
+        </p>
+        <h5>Desenvolvimento</h5>
+        <p>O jogo foi desenvolvido no estilo top-down inspirado em grande parte no jogo pac-man, porém trazendo uma ideia de
+          conscientização ambiental. Totalmente programado em Java e consequentemente em POO, toda a parte de interface gráfica foi
+          feita com a biblioteca gráfica Swing popularmente conhecida como java 2d, o mapa é feito é divido por tiles, que compõe a tela,
+          os tiles tem como atributos a sua spryte e também uma variavel "Colisão" (booleana), esses tiles são definidos no codigo da classe
+          responsável pela construção do mapa, a organização e desenho dos mesmos, é feita através da visão do mapa como uma matriz, dessa forma,
+          o desenho do mapa pode ser livremente feito em um arquivo txt, utilizando o index do tile e os separando por espaço, este arquivo é lido
+          pelo codigo e guardado como matriz, que logo após é desenhada no mapa.
+          As entidades possuem diversos atributos e métodos, sendo eles tamanho, hitbox, verificação de colisão e sprites, o player possue metodos para
+          de recebimentos de comando e metodos de uso de itens bonus, assim como vida, pontuação, metodo de captura de lixo e outros. já o vião possue
+          uma mecanica de perseguição inteligente, que trata o mapa como um grafo, dessa forma, consegue calcular a melhor rota até o player a cada loop do jogo.
+          Os itens possuem tamanho, score, spryte e o metod
+        </p>
           <h5>Conclusão</h5>
           <p>Jogo com temática ambiental, desenvolvido em Java como parte de um projeto acadêmico em
             colaboração com meus colegas de faculdade. O jogo tem como contexto uma cidade afetada pela poluição, onde o
@@ -58,7 +63,7 @@
         <h2>Imagens</h2>
         <hr>
         <div class="row">
-          <div class="col-6">
+          <div class="col-lg-6 col-12">
             <div class="card projetos">
               <img class="card-img-top img-projeto" src="Tela_menu.png" data-toggle="modal" data-target="#modalImagem1"
                 alt="Projeto 1" />
@@ -80,7 +85,7 @@
             </div>
           </div>
 
-          <div class="col-6">
+          <div class="col-lg-6 col-12">
             <div class="card projetos">
               <img class="card-img-top img-projeto" src="Tela_jogo2.png" data-toggle="modal" data-target="#modalImagem2"
                 alt="Projeto 1" />
@@ -103,7 +108,7 @@
           </div>
 
 
-          <div class="col-6">
+          <div class="col-lg-6 col-12">
             <div class="card projetos">
               <img class="card-img-top img-projeto" src="Tela_jogo1.png" data-toggle="modal" data-target="#modalImagem3"
                 alt="Projeto 1" />
@@ -125,7 +130,7 @@
           </div>
 
 
-          <div class="col-6">
+          <div class="col-lg-6 col-12">
             <div class="card projetos">
               <img class="card-img-top img-projeto" src="Tela_gameover.png" data-toggle="modal"
                 data-target="#modalImagem4" alt="Projeto 1" />
