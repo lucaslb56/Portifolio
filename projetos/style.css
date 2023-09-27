@@ -14,7 +14,6 @@ nav {
   .jumbotron {
     background-image: url("wallpaper.jpg");
     background-size: cover;
-    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
