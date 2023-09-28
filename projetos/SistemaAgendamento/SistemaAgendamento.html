@@ -43,7 +43,7 @@
   <header class="jumbotron">
     <div class="container">
       <h1 class="display-4">Sistema de Agendamento de Salas</h1>
-      <p class="lead">Jogo em java</p>
+      <p class="lead">Sistema web para controle e gerenciamento de salas</p>
     </div>
   </header>
 
@@ -53,61 +53,58 @@
         <h2>Sobre</h2>
         <hr>
         <h5>Introdução</h5>
-        <p>Jogo com temática ambiental, desenvolvido em Java como parte de um projeto acadêmico em
-          colaboração com meus colegas de faculdade. O jogo tem como contexto uma cidade afetada pela poluição, onde o
-          objetivo
-          do jogador é coletar uma quantidade máxima de resíduos enquanto evita as lixeiras radioativas que ganharam
-          vida devido
-          ao excesso de lixo.
+        <p>Este projeto consiste em um sistema de agendamento de salas desenvolvido para fins acadêmicos em um curso técnico.
+           Sua finalidade principal é administrar eficazmente os laboratórios e salas de instituições de ensino. Para alcançar
+            esse objetivo, o sistema oferece diversas funcionalidades e uma interface web responsiva e dinâmica.
         </p>
         <h5>Desenvolvimento</h5>
         <p>
-          O jogo em questão foi desenvolvido no estilo top-down, tendo como principal inspiração o icônico
-           Pac-Man. No entanto, sua singularidade está na incorporação de uma forte mensagem de conscientização
-            ambiental. Todo o processo de programação ocorreu em Java, adotando, por consequência, a abordagem
-             da Programação Orientada a Objetos (POO). Quanto à parte de interface gráfica, esta foi
-              integralmente construída com a utilização da biblioteca gráfica Swing, popularmente conhecida
-               como Java 2D.
+          O sistema foi desenvolvido utilizando PHP, com as interfaces construídas em HTML e CSS, beneficiando-se do auxílio do framework
+           Bootstrap para conferir à interface uma maior dinamicidade, interatividade e responsividade. Isso resulta em uma experiência
+            de usuário aprimorada. Além disso, o desenvolvimento desse sistema coloca em prática conceitos fundamentais, como o relacionamento
+             de entidades em bancos de dados, operações de CRUD e princípios de User Experience (UX). Para a gestão de dados, optou-se pelo
+              SGBD MySQL.
           </p>
-          <h5>Mapa</h5>
+          <h5>Home</h5>
           <p>
-            A estrutura do jogo se baseia na divisão do mapa em "tiles," que, por sua vez, compõem a tela de
-             jogo. Cada tile é definido com atributos específicos, incluindo a sua sprite e uma variável
-              booleana denominada "Colisão." Essa definição dos tiles acontece no código da classe responsável
-               pela construção do mapa, que adota uma perspectiva matricial para a organização e renderização
-                dos elementos. Dessa forma, a representação visual do mapa pode ser livremente concebida em um
-                 arquivo de texto, no qual os índices dos tiles são separados por espaços. Esse arquivo é 
-                 então lido pelo código e transformado em uma matriz, que, por fim, é desenhada na tela do 
-                 jogo.
+            Na tela principal (Home), os usuários podem verificar a disponibilidade das salas por meio de um calendário que exibe os
+             agendamentos armazenados no banco de dados para a sala escolhida. Isso proporciona uma representação visual dos agendamentos,
+              tornando o uso mais dinâmico. Ao clicar no botão 'Agendar' ou em um dia no calendário, os usuários serão direcionados para a
+               tela de agendamento.
           </p>
-          <h5>Entidades</h5>
+          <h5>Agendamento</h5>
           <p>
-            No que diz respeito às entidades presentes no jogo, elas são dotadas de diversos atributos
-             e métodos. O jogador, por exemplo, possui características como tamanho, hitbox, detecção de
-              colisões e sprites. Além disso, o jogador dispõe de métodos para receber comandos e para usar
-               itens bônus. O jogo também leva em conta elementos como a vida do jogador, sua pontuação,
-                um mecanismo de captura de lixo, entre outros.
+            O processo de agendamento de salas é realizado por meio de um formulário que inclui validações e regras de negócio essenciais para
+             evitar inconsistências nos agendamentos e garantir a integridade das informações. Este formulário é preenchido com detalhes,
+              como o nome da sala ou laboratório, data e horário do agendamento, e outros dados relevantes.
           </p>
           <p>
-            O antagonista do jogo, o vilão, adota uma mecânica de perseguição inteligente. Ele trata o mapa
-             como um grafo, o que lhe permite calcular a melhor rota até o jogador em cada ciclo do jogo. Isso 
-             adiciona um nível de desafio significativo à experiência do jogador.
+            Os agendamentos podem ser configurados de duas formas: individualmente ou como repetições semanais. Além disso, os usuários têm a
+             flexibilidade de agendar salas para si mesmos, enquanto administradores têm a capacidade de agendar salas em nome de outras pessoas.
+              Também é possível adicionar comentários e solicitar equipamentos necessários durante o processo de agendamento.
           </p>
-          <h5>Itens</h5>
+          <h5>Relatórios</h5>
           <p>
-            Os itens no jogo possuem atributos como tamanho, pontuação, sprite e um método que é executado
-             quando há uma colisão com o jogador. Esse método define a funcionalidade do item, como, por
-              exemplo, sua coleta ou ações especiais. Notavelmente, os itens de lixo acrescem pontos ao
-               jogador e retardam o seu tempo de inatividade, ao passar do tempo de jogo fica mais dificil retardar
-               o tempo de inatividade trazendo um pouco mais de desafio ao jogador.
+            Os administradores têm acesso a uma seção na qual podem criar relatórios de agendamentos, fazendo uso de filtros ou pesquisando
+             agendamentos específicos. Isso possibilita uma gestão mais eficiente da utilização das salas e um controle mais preciso sobre elas.
+              Além disso, eles têm a capacidade de visualizar, editar e excluir agendamentos.
           </p>
-          <h5>Rercords</h5>
+          <h5>usuários</h5>
           <p>
-            Por fim, o jogo apresenta um sistema de registro de recordes, no qual o jogador tem seu recorde
-             salvo na tela inicial, caso ele supere seu melhor desempenho anterior. Essa característica
-              é incorporada para incentivar a competição e o aprimoramento da jogabilidade, tornando a 
-              experiência do jogador mais envolvente e desafiadora.
+            O sistema oferece três níveis de acesso. Inicialmente, os visitantes têm acesso apenas à tela inicial (Home), onde podem verificar
+             os agendamentos existentes. No entanto, para desfrutar de todas as funcionalidades do sistema, é necessário realizar o cadastro
+              e efetuar o login.
+            </p>
+            <p>Os três tipos de acesso no sistema são os seguintes:</p>
+            <li>Aluno - o nível mais básico, que oferece funcionalidades essenciais.</li>
+            <li>Professor - permite solicitação de equipamentos, agendamentos em massa e tem a capacidade de sobrepor agendamentos de alunos,
+               notificando-os por e-mail sobre a realocação de seus agendamentos devido à prioridade do professor.
+            </li>
+            <li>Administrador - tem acesso a recursos avançados, como a geração de relatórios, a edição e exclusão de agendamentos, a
+               possibilidade de agendar salas em nome de outras pessoas e a administração dos usuários cadastrados.
+            </li>
           </p>
+          
       </div>
     </section>
 
@@ -118,7 +115,7 @@
         <div class="row">
           <div class="col-lg-6 col-12">
             <div class="card imagens">
-              <img class="card-img-top img-projeto" src="Tela_menu.png" data-toggle="modal" data-target="#modalImagem1"
+              <img class="card-img-top img-projeto" src="HomeM.jpeg" data-toggle="modal" data-target="#modalImagem1"
                 alt="Projeto 1" />
               
                 <!-- Modal para a imagem em tamanho maior -->
@@ -127,7 +124,7 @@
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-body">
-                        <img src="Tela_menu.png" class="img-fluid">
+                        <img src="HomeM.jpeg" class="img-fluid">
                       </div>
                     </div>
                   </div>
@@ -138,7 +135,7 @@
 
           <div class="col-lg-6 col-12">
             <div class="card imagens">
-              <img class="card-img-top img-projeto" src="Tela_jogo2.png" data-toggle="modal" data-target="#modalImagem2"
+              <img class="card-img-top img-projeto" src="relatoriosM.jpeg" data-toggle="modal" data-target="#modalImagem2"
                 alt="Projeto 1" />
               
                 <!-- Modal para a imagem em tamanho maior -->
@@ -147,7 +144,7 @@
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-body">
-                        <img src="Tela_jogo2.png" class="img-fluid">
+                        <img src="relatoriosM.jpeg" class="img-fluid">
                       </div>
                     </div>
                   </div>
@@ -159,7 +156,7 @@
 
           <div class="col-lg-6 col-12">
             <div class="card imagens">
-              <img class="card-img-top img-projeto" src="Tela_jogo1.png" data-toggle="modal" data-target="#modalImagem3"
+              <img class="card-img-top img-projeto" src="agendamentoM.jpeg" data-toggle="modal" data-target="#modalImagem3"
                 alt="Projeto 1" />
               
                 <!-- Modal para a imagem em tamanho maior -->
@@ -168,7 +165,7 @@
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-body">
-                        <img src="Tela_jogo1.png" class="img-fluid">
+                        <img src="agendamentoM.jpeg" class="img-fluid">
                       </div>
                     </div>
                   </div>
@@ -180,7 +177,7 @@
 
           <div class="col-lg-6 col-12">
             <div class="card imagens">
-              <img class="card-img-top img-projeto" src="Tela_gameover.png" data-toggle="modal"
+              <img class="card-img-top img-projeto" src="loginM.jpeg" data-toggle="modal"
                 data-target="#modalImagem4" alt="Projeto 1" />
                 <!-- Modal para a imagem em tamanho maior -->
                 <div class="modal fade mt-sm-4" id="modalImagem4" tabindex="-1" aria-labelledby="modalImagemLabel"
@@ -188,7 +185,7 @@
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-body">
-                        <img src="Tela_gameover.png" class="img-fluid">
+                        <img src="loginM.jpeg" class="img-fluid">
                       </div>
                     </div>
                   </div>
@@ -205,7 +202,7 @@
 
   <footer id="repositorio" class="bg-light">
     <div class="container">
-      <p>&copy; Repositório: <a href="https://github.com/lucaslb56/Jogo_Aps"> https://github.com/lucaslb56/Jogo_Aps</a></p>
+      <p>&copy; Repositório: <a href="https://github.com/lucaslb56/Sistema-agendamento.git"> https://github.com/lucaslb56/Sistema-agendamento.git</a></p>
     </div>
   </footer>
 
