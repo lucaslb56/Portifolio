@@ -373,9 +373,10 @@ $(document).ready(function() {
   $('.projetos').on('click', function() {
     // Obtém o valor do atributo data-src
     var dataSrc = $(this).data('src');
+    if (dataSrc) window.location.href = dataSrc;
 
     // Redireciona para a página especificada
-    window.location.href = dataSrc;
+    
   });
 });
 </script>
